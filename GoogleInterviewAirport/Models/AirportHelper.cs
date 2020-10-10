@@ -6,7 +6,7 @@ namespace GoogleInterviewAirport.Models
   {
     public static string[] AirportList()
     {
-      return new string[] { "BGI", "CDG", "DEL", "DOH", "DSM", "EWR", "EYW", "HND", "ICN", "JFK", "LGA", "LHR", "ORD", "SAN", "SFO", "SIN", "TLV", "BUD", };
+      return new string[] { "BGI", "CDG", "DEL", "DOH", "DSM", "EWR", "EYW", "HND", "ICN", "JFK", "LGA", "LHR", "ORD", "SAN", "SFO", "SIN", "TLV", "BUD" };
     }
 
     public static string[,] RoutesList()
