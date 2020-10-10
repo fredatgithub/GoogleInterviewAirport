@@ -13,7 +13,7 @@ namespace GoogleInterviewAirport
       string[,] routes = AirportHelper.RoutesList();
       string startingAirport = "LGA";
       int answer = 3;
-      // write a method that gives me the minimum connexion from startingAirport to any airports
+      // write a method that gives the minimum connexion from startingAirport to any airports
       foreach (string airport in airports)
       {
         Console.WriteLine($"From LGA to {airport}, you have to go through {GetMinimumRoute(airport)}");

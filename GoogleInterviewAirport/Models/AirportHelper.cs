@@ -13,7 +13,7 @@ namespace GoogleInterviewAirport.Models
     {
       return new string[,] {
                 { "DSM", "ORD" },
-                { "ORD", "BGI"},
+                { "ORD", "BGI" },
                 { "BGI", "LGA" },
                 { "SIN", "CDG" },
                 { "CDG", "SIN" },
@@ -32,6 +32,31 @@ namespace GoogleInterviewAirport.Models
                 { "SFO", "DSM" },
                 { "SAN", "EYW" }
       };
+    }
+
+    public static string GetAirportFrom(string airportFromTo)
+    {
+      return airportFromTo.Split('-')[0];
+    }
+
+    public static string GetAirportTo(string airportFromTo)
+    {
+      return airportFromTo.Split('-')[1];
+    }
+
+    public static List<string> GetAllPossibleAirport(string fromAirport)
+    {
+      List<string> result = new List<string>();
+      var routes = RouteList();
+      foreach (var item in routes)
+      {
+        if (item.Contains(fromAirport))
+        {
+          result.Add(item);
+        }
+      }
+
+      return result;
     }
 
     public static List<string> RouteList()
